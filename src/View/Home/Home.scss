@@ -1,0 +1,10 @@
+@import "./src/SCSS/variables";
+@import "./src/SCSS/mixins.scss";
+
+@include breakpoint-max($breakpointTablet) {
+  .Home {
+    & > .BackgroundContainer {
+      background: transparent;
+    }
+  }
+}

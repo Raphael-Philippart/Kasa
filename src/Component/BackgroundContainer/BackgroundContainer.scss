@@ -1,0 +1,13 @@
+@import "./src/SCSS/variables";
+@import "./src/SCSS/mixins.scss";
+
+.BackgroundContainer {
+  background: $colorBackgroundContainer;
+  border-radius: 25px;
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .BackgroundContainer {
+    font-size: 14px;
+  }
+}

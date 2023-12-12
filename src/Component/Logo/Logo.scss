@@ -1,0 +1,12 @@
+@import "./src/SCSS/variables.scss";
+@import "./src/SCSS/mixins.scss";
+
+.Logo {
+  width: 200px;
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .Logo {
+    width: 100px;
+  }
+}

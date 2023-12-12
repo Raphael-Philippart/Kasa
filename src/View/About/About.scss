@@ -1,0 +1,12 @@
+@import "../../SCSS/variables";
+@import "../../SCSS/mixins";
+
+.About {
+  margin: 20px 109px 0;
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .About {
+    margin: 20px 0;
+  }
+}

@@ -1,0 +1,47 @@
+@import "./src/SCSS/variables";
+@import "./src/SCSS/mixins";
+
+.NotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: $colorSecondary;
+
+  & > p:first-child {
+    font-size: 288px;
+    line-height: 410.69px;
+  }
+
+  & > p:nth-last-child(n+2):not(p:first-child) {
+    font-size: 36px;
+    line-height: 51.34px;
+  }
+
+  & > a:last-child {
+    font-size: 18px;
+    line-height: 25.67px;
+    margin-top: 146px;
+    color: $colorSecondary;
+  }
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .NotFound {
+    & > p:first-child {
+      margin-top: 160px;
+      font-size: 96px;
+      line-height: 136.9px;
+    }
+    & > p:nth-last-child(n+2):not(p:first-child) {
+      font-size: 18px;
+      line-height: 25.67px;
+    }
+    & > a:last-child {
+      font-size: 14px;
+      line-height: 19.96px;
+      margin-bottom: 80px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "./src/SCSS/variables.scss";
+@import "./src/SCSS/mixins.scss";
+
+.ImageRounded {
+  width: 64px;
+  & > img {
+    border-radius: 50px;
+  }
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .ImageRounded {
+    width: 32px;
+  }
+}

@@ -1,0 +1,30 @@
+@import "./src/SCSS/variables.scss";
+@import "./src/SCSS/mixins.scss";
+
+.Tags {
+  height: 25px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  & > span {
+    height: 25px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 2px 25px;
+    margin-right: 10px;
+    color: $colorPrimary;
+    background: $colorSecondary;
+    border-radius: 10px;
+  }
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .Tags {
+    & > span {
+      font-size: 10px;
+      padding: 2px 25px;
+      margin-right: 5px;
+      border-radius: 5px;
+    }
+  }
+}

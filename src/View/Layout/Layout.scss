@@ -1,0 +1,18 @@
+@import "./src/SCSS/variables.scss";
+@import "./src/SCSS/mixins.scss";
+
+.Wrapper {
+  padding: 40px 100px;
+}
+
+@include breakpoint-max($breakpointTablet) {
+  .Wrapper {
+    padding: 15px 20px;
+  }
+}
+
+@include breakpoint-min-max($breakpointTablet, $breakpointDesktop) {
+  .Wrapper {
+    padding: 15px 15px;
+  }
+}

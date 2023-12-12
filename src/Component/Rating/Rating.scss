@@ -1,0 +1,16 @@
+@import "./src/SCSS/variables.scss";
+@import "./src/SCSS/mixins.scss";
+
+.Rating {
+  & > img {
+    width: 32px;
+  }
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .Rating {
+    & > img {
+      width: 18px;
+    }
+  }
+}

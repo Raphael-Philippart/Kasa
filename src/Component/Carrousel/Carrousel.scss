@@ -1,0 +1,103 @@
+@import "./src/SCSS/variables.scss";
+@import "./src/SCSS/mixins.scss";
+
+.Carrousel {
+  height: 415px;
+  margin-top: 20px;
+  position: relative;
+
+  &Right {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+
+    & > img {
+      height: 79px;
+    }
+  }
+
+  &Left {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+
+    & > img {
+      height: 79px;
+    }
+  }
+
+  &Position {
+    position: absolute;
+    color: $colorPrimary;
+    font-size: 18px;
+    line-height: 32.4px;
+    bottom: 10px;
+    left: 50%;
+    z-index: 10;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &Right,
+  &:hover &Left,
+  &:hover &Position {
+    cursor: pointer;
+    opacity: 1;
+  }
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .Carrousel {
+    height: 255px;
+    margin-top: 10px;
+
+    &Right {
+      & > img {
+        height: 20px;
+      }
+    }
+
+    &Left {
+      & > img {
+        height: 20px;
+      }
+    }
+
+    &Position {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+
+@include breakpoint-min-max($breakpointMobile, $breakpointTablet) {
+  .Carrousel {
+    height: 355px;
+    margin-top: 10px;
+
+    &Right {
+      & > img {
+        height: 30px;
+      }
+    }
+
+    &Left {
+      & > img {
+        height: 30px;
+      }
+    }
+
+    &Position {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

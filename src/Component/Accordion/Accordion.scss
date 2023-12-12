@@ -1,0 +1,82 @@
+@import "./src/SCSS/variables";
+@import "./src/SCSS/mixins.scss";
+
+.Accordion {
+  margin-bottom: 33px;
+
+  &Title {
+    color: $colorPrimary;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 15px;
+    border-radius: 10px;
+    background: $colorSecondary;
+    overflow: hidden;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &Content {
+    overflow: hidden;
+    color: $colorSecondary;
+    font-size: 18px;
+
+    & > div > div {
+      overflow: hidden;
+      border-radius: 10px;
+      padding: 15px 15px;
+    }
+
+    &.Active > div {
+      max-height: 50px;
+      transition: max-height 550ms ease-in-out;
+    }
+
+    &.Disable > div {
+      max-height: 0;
+      transition: max-height 550ms ease-in-out;
+    }
+  }
+
+  &Open {
+    width: 25px;
+    transform: rotate(0);
+    transition: all 300ms ease-in-out;
+  }
+
+  &Close {
+    width: 25px;
+    transform: rotate(180deg);
+    transition: all 300ms ease-in-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .Accordion {
+    margin-bottom: 20px;
+    &Title {
+      font-size: 13px;
+      line-height: 13px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    &Content {
+      font-size: 12px;
+      line-height: 17.1px;
+    }
+    &Open {
+      width: 15px;
+    }
+
+    &Close {
+      width: 15px;
+    }
+  }
+}

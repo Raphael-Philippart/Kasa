@@ -1,0 +1,11 @@
+@import "./src/SCSS/variables.scss";
+
+.Star {
+  color: $colorSecondary;
+  &On {
+    filter: brightness(100%);
+  }
+  &Off {
+    filter: grayscale(100%) opacity(40%);
+  }
+}

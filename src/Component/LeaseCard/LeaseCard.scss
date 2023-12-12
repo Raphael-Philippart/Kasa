@@ -1,0 +1,64 @@
+@import "../../SCSS/variables";
+@import "../../SCSS/mixins";
+
+.Lease {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px;
+  margin-top: 40px;
+  column-gap: 20px;
+  row-gap: 40px;
+
+  &Card {
+    position: relative;
+    height: 340px;
+    flex-basis: 31%;
+    background: linear-gradient(180deg, $colorSecondary 0%, rgba(0, 0, 0, 0.6) 100%), $colorSecondary;
+    border-radius: 10px;
+
+    & > .ImageCover {
+      border-radius: 10px;
+    }
+
+    &:hover {
+      filter: brightness(90%) opacity(80%)
+    }
+
+    &Title {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 25.67px;
+      color: $colorPrimary;
+      text-shadow: #000 2px 1px 10px;
+    }
+  }
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .Lease {
+    padding: 0;
+    margin-top: 20px;
+
+    &Card {
+      height: 255px;
+      flex-basis: 100%;
+    }
+  }
+}
+
+@include breakpoint-min-max($breakpointMobile, $breakpointTablet) {
+  .Lease {
+    padding: 0;
+    margin-top: 20px;
+
+    &Card {
+      height: 255px;
+      flex-basis: 48%;
+    }
+  }
+}

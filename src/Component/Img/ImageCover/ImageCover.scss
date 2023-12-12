@@ -1,0 +1,16 @@
+@import "./src/SCSS/variables.scss";
+@import "./src/SCSS/mixins.scss";
+
+.ImageCover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .ImageCover {
+    border-radius: 10px;
+  }
+}
