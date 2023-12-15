@@ -34,5 +34,10 @@
   .Header {
     font-size: 18px;
     margin-top: 15px;
+    & > ul {
+      & > li {
+        text-transform: uppercase;
+      }
+    }
   }
 }
